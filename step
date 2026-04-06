@@ -67,9 +67,31 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 Download apache-maven-3.9.12-bin.zip
 C:\Program Files\Apache\apache-maven-3.9.12
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+</project>
+Explanation:
+- pom.xml defines project configuration
+- JUnit dependency enables unit testing
 
+STEP 5: Test Project Locally
+Command:
+mvn clean test
+Expected Output:
+BUILD SUCCESS
 
-
+STEP 6: Push Project to GitHub
+Commands:
+git init
+git add .
+git commit -m "Initial Maven project with JUnit test"
+git branch -M main
+git remote add origin <your-repository-url>
+git push -u origin main
+final:
 pipeline {
 agent any
 tools {
